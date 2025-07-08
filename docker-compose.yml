@@ -1,0 +1,13 @@
+version: '3'
+services:
+  main_service:
+    build: ./main_service
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./main_service:/app
+
+  fast_microservice:
+    build: ./fast_microservice
+    ports:
+      - "5001:5001"
